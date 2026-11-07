@@ -1,0 +1,54 @@
+/* Notecreate's newsprint: matte paper, soft ink, the faded red of old printers' ink. */
+@font-face { font-family: "Fraunces"; src: url(fonts/fraunces.ttf); font-weight: 100 900; font-display: swap; }
+@font-face { font-family: "Plus Jakarta Sans"; src: url(fonts/plus_jakarta_sans.ttf); font-weight: 200 800; font-display: swap; }
+@font-face { font-family: "UnifrakturMaguntia"; src: url(fonts/unifraktur.ttf); font-display: swap; }
+
+:root {
+  --bg: #E6E0D2; --card: #EEE9DE; --ink: #2B2824; --muted: #6E675D;
+  --line: #CFC6B5; --accent: #7E5A4B; --accent-soft: #DCD2C2;
+}
+@media (prefers-color-scheme: dark) {
+  :root { --bg: #BDB39E; --card: #C6BDAA; --ink: #27241F; --muted: #5A5348; --line: #A89E88; --accent: #6E5042; --accent-soft: #B2A890; }
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body { margin: 0; background: var(--bg); color: var(--ink); font: 16px/1.65 "Plus Jakarta Sans", system-ui, sans-serif; }
+main { max-width: 680px; margin: 0 auto; padding: 16px 16px 56px; }
+
+html[lang="en"] div[lang="tr"], html[lang="tr"] div[lang="en"] { display: none; }
+
+.top { display: flex; align-items: center; justify-content: space-between; padding: 8px 0 18px;
+  border-bottom: 2px solid var(--ink); box-shadow: 0 3px 0 -2px var(--bg), 0 4px 0 -2px var(--muted); margin-bottom: 28px; }
+.brand { font-family: "UnifrakturMaguntia", serif; font-size: 30px; color: var(--ink); opacity: .85; text-decoration: none; }
+.dot { color: var(--accent); }
+.langs button { font: 600 12px/1 "Plus Jakarta Sans", sans-serif; letter-spacing: .08em; color: var(--muted);
+  background: none; border: 1px solid var(--line); border-radius: 999px; padding: 7px 11px; margin-left: 6px; cursor: pointer; }
+html[lang="en"] [data-set-lang="en"], html[lang="tr"] [data-set-lang="tr"] { background: var(--ink); color: var(--bg); opacity: .78; border-color: transparent; }
+
+.overline { font-size: 11px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); margin: 0 0 6px; }
+h1, h2, h3, summary { font-family: "Fraunces", Georgia, serif; font-weight: 500; letter-spacing: -.01em; }
+h1 { font-size: 36px; line-height: 1.1; margin: 0 0 8px; }
+.updated { color: var(--muted); font-size: 14px; margin: 0 0 24px; }
+.summary { border-left: 3px solid var(--accent); padding: 4px 0 4px 16px; margin: 0 0 28px; }
+.summary p { margin: 0; font-size: 17px; }
+section { background: var(--card); border: 1px solid var(--line); border-radius: 6px; padding: 4px 20px 6px; margin: 0 0 12px; }
+h2 { font-size: 21px; margin: 16px 0 6px; }
+p { margin: 0 0 12px; }
+ul { margin: 0 0 12px; padding-left: 20px; }
+li { margin: 0 0 6px; }
+li::marker { color: var(--accent); }
+a { color: var(--accent); text-decoration: none; font-weight: 600; }
+h3.group { font-size: 13px; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); margin: 32px 0 8px;
+  border-top: 1px solid var(--line); padding-top: 14px; }
+details { border-bottom: 1px dotted var(--line); padding: 10px 0; }
+summary { cursor: pointer; font-size: 18px; }
+details div { color: var(--ink); padding: 8px 0 4px; }
+kbd { font: 600 13px "Plus Jakarta Sans", sans-serif; background: var(--accent-soft); border-radius: 4px; padding: 1px 6px; }
+.contact { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px;
+  background: var(--card); border: 1px solid var(--line); border-radius: 6px; padding: 16px 20px; margin: 0 0 16px; }
+.contact p { margin: 0; } .contact b { display: block; font-size: 18px; }
+.button { background: var(--ink); color: var(--bg); opacity: .8; border-radius: 999px; padding: 10px 18px; }
+.cards section h2 a { color: var(--ink); }
+.hero { text-align: center; margin: 12px 0 28px; }
+.hero img { border-radius: 18px; }
+footer { color: var(--muted); font-size: 13px; text-align: center; margin-top: 28px; }
